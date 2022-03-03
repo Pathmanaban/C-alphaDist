@@ -3,6 +3,19 @@ Python script to calculate distance between amino acids C-alpha atoms using PDB 
 
 Takes "csv file" as input and outputs a "tsv file" containing distance information
 
+#### Infile example
+
+
+      ----------------------------------
+     | ACC_ID  | residue1   | residue2 |
+     | --------|------------|----------|
+     | O00571  |     46     |    320   |
+     | O00571  |    100     |    125   | 
+     | P02545  |    235     |    240   |
+     | P02545  |    116     |    200   |
+      ----------------------------------
+
+
 ## Usage
 
     python CAdist_AF.py  -i "input filename" -o "output filename" -p1 "residue1" -p2 "residue 2" -a "protein ID"
@@ -26,7 +39,7 @@ Takes "csv file" as input and outputs a "tsv file" containing distance informati
     python CAdist_AF.py  -i example.txt -o exampleout.txt -a 0 -p1 1 -p2 2 
     
 
-## Information written to outfile
+#### Information written to outfile
 
 Results will be wirtten as tab delimited to the specified outfile name. 
 
