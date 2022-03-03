@@ -52,24 +52,24 @@ def pdbparse(protid,pos1,pos2):
 def CAdist():			
 	parser = argparse.ArgumentParser(description='CA distance ')
 
-	parser.add_argument('-i','--ifile', help='Specify the infile name with extension', required=True)
-	parser.add_argument('-o','--ofile', help='Specify the outfile name with extension', required=True)
-	parser.add_argument('-p1','--mutpos',help='Column index of mutation location in infile',required=True)
-	parser.add_argument('-p2','--ptmpos',help='column index of modification in infile',required=True)
+	parser.add_argument('-i','--ifile', help='specify the infile name with extension', required=True)
+	parser.add_argument('-o','--ofile', help='specify the outfile name with extension', required=True)
+	parser.add_argument('-p1','--pos1',help='column index of first residue position in infile',required=True)
+	parser.add_argument('-p2','--pos2',help='column index of second residue in infile',required=True)
 	parser.add_argument('-a','--acc',help='column index of protein accession in infile',required=True)
 	args = vars(parser.parse_args())
 	
 	if len(args)==5:
 		infile=args['ifile']
 		outfile=args['ofile']
-		mut_pos=int(args['mutpos'])
-		ptm_pos=int(args['ptmpos'])
+		mut_pos=int(args['pos1'])
+		ptm_pos=int(args['pos2'])
 		accession=int(args['acc'])
 		
 		
 		with open(infile,'r') as infile,open(outfile,'w') as outfile1:
 			writer = csv.writer(outfile1,delimiter='\t')
-			writer.writerow(['ACC_ID','Mut_pos','PTM_pos','CAdist(A)'])
+			writer.writerow(['ACC_ID','residue1','residue2','CAdist(A)'])
 			next(infile,None)
 	
 	
