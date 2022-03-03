@@ -28,6 +28,8 @@ Takes "csv file" as input and outputs a "tsv file" containing distance informati
 ## Information written to outfile
 
 Results will be wirtten as tab delimited to the specified outfile name. 
+
+
      ----------------------------------------------
      | ACC_ID  | residue1   | residue2 | CAdist   |
      | --------|------------|----------|--------- |
