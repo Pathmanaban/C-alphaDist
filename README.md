@@ -1,4 +1,5 @@
-# CRdist
+# C-alphaDist
+
 Python script to calculate distance between amino acids C-alpha atoms using PDB file. Works with AlphaFold models.
 
 Takes "csv file" as input and outputs a "tsv file" containing distance information
