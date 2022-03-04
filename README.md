@@ -29,9 +29,9 @@ Takes "csv file" as input and outputs a "tsv file" containing distance informati
   
     -a,--acc           column index of protein accession in infile
     
-    -p1, --pos1         column index for first residue in infile
+    -p1, --pos1        column index for first residue in infile
     
-    -p2,--pos2          column index for the second residue in infile
+    -p2,--pos2         column index for the second residue in infile
 
     -h, --help         show this help message and exit
 
